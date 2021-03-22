@@ -2,7 +2,9 @@
 
 let options = [];
 const features = {
-  case: false,
-  cable: false,
+  orangeCase: false,
+  blueCase: false,
+  coiledCable: false,
+  straightCable: false,
   wristRest: false,
 };
