@@ -69,6 +69,7 @@ main img {
   max-width: 1100px;
   height: auto;
 }
+
 .config-container {
   display: flex;
   align-items: center;
@@ -79,23 +80,21 @@ main img {
     rgba(240, 240, 240, 1) 100%
   );
   width: 1600px;
-  height: 750px;
+  height: 760px;
   margin: auto;
   -webkit-box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
   -moz-box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
   box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
 }
 
-.keyboard {
-  margin: 50px 200px 0 50px;
-}
 .options {
   margin: 50px 50px 0 0;
 }
 .config-container span {
   font-family: var(--primary-font);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 23px;
+  color: gray;
 }
 
 h3 {
@@ -126,8 +125,24 @@ h4 {
 
 .cables-container {
   display: flex;
+  margin-bottom: 40px;
 }
 
 .keyboard {
+  margin: 50px 200px 0 50px;
+  display: inline-block;
+  margin: auto;
+  z-index: 1;
+}
+
+svg {
   display: block;
+  width: 200px;
+  height: auto;
+}
+
+svg g {
+  cursor: pointer;
+  color: transparent;
+  position: relative;
 }
