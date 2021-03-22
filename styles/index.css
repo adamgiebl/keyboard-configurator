@@ -72,3 +72,16 @@ main img {
   max-width: 1100px;
   height: auto;
 }
+.config-container {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(240, 240, 240, 1) 100%
+  );
+  width: 1600px;
+  height: 700px;
+  margin: auto;
+  -webkit-box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
+  box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
+}
