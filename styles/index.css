@@ -127,3 +127,7 @@ h4 {
 .cables-container {
   display: flex;
 }
+
+.keyboard {
+  display: block;
+}

@@ -13,5 +13,5 @@ const features = {
 async function init() {
   const res = await fetch("./images/Keyboard.svg");
   const svgText = await res.text();
-  headContainer.innerHTML = svgText;
+  keyboardContainer.innerHTML = svgText;
 }
