@@ -128,3 +128,11 @@ main img {
 .footer ul li a {
   text-decoration: none;
 }
+.additional-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.additional-item h3 {
+  margin-top: 20px;
+}
