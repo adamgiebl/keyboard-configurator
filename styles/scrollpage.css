@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+
+:root {
+  --primary-font: "Source Code Pro", monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--primary-font);
+}
+.wrapper {
+  max-width: 1450px;
+  margin: 0px auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding-right: 20px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta h1 {
+  font-family: var(--primary-font);
+  max-width: 500px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.cta h3 {
+  font-family: var(--primary-font);
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 500px;
+}
+
+.cta a {
+  margin-top: 20px;
+  background: black;
+  border: none;
+  padding: 15px 25px;
+  color: white;
+  font-family: var(--primary-font);
+  text-decoration: none;
+}
+
+main img {
+  padding-left: 50px;
+  max-width: 800px;
+}
+
+.mechanical-switches {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 300px;
+}
+
+.ms h3 {
+  max-width: 400px;
+}
+.additional-features img {
+  max-width: 100px;
+}
+
+.ad-feat {
+  max-width: 1000px;
+}
+.ad-feat h1 {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.additional-features {
+  font-family: var(--primary-font);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 300px;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.footer ul {
+  font-family: var(--primary-font);
+  list-style: none;
+  margin-right: 200px;
+}
+.footer ul li {
+  line-height: 30px;
+  font-size: 18px;
+}
+.footer ul li a {
+  text-decoration: none;
+}
