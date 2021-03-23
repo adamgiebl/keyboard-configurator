@@ -9,7 +9,7 @@
     <title>Keyboard configurator</title>
   </head>
   <body>
-    <header class="wrapper">
+    <header class="wrapper header--configurator">
       <nav>
         <ul>
           <li><a href="./index.html">HOME</a></li>
@@ -20,49 +20,78 @@
       <img class="logo" src="./images/logo.svg" alt="mechanical keyboard" />
     </header>
     <div class="config-container wrapper">
-      <div class="keyboard"></div>
+      <div class="keyboard">
+        <div class="color-picker"></div>
+      </div>
       <div class="options">
         <span class="subheading">Cases</span>
-        <div class="cases-container">
-          <div class="the-item">
-            <div class="option" data-feature="orange-case">
+        <div class="option-container">
+          <div
+            class="option-item"
+            data-feature="metalCase"
+            data-category="case"
+          >
+            <div class="option">
               <img src="./images/orange-case.svg" alt="" />
             </div>
             <h3>Metal case</h3>
-            <h4>This item can change colors</h4>
           </div>
-          <div class="the-item">
-            <div class="option" data-feature="blue-case">
+          <div
+            class="option-item"
+            data-feature="plasticCase"
+            data-category="case"
+          >
+            <div class="option">
               <img src="./images/blue-case.svg" alt="" />
             </div>
             <h3>Plastic case</h3>
-            <h4>This item can change colors</h4>
           </div>
         </div>
         <span class="subheading">Cables</span>
-        <div class="cables-container">
-          <div class="the-item">
-            <div class="option" data-feature="coiled-cable">
+        <div class="option-container">
+          <div
+            class="option-item"
+            data-feature="straightCable"
+            data-category="cable"
+          >
+            <div class="option">
+              <img src="./images/signal.svg" alt="" />
+            </div>
+            <h3>Wireless</h3>
+          </div>
+          <div
+            class="option-item"
+            data-feature="coiledCable"
+            data-category="cable"
+          >
+            <div class="option">
               <img src="./images/coiled-cable.svg" alt="" />
             </div>
             <h3>Coiled cable</h3>
-            <h4>This item can change colors</h4>
           </div>
-          <div class="the-item">
-            <div class="option" data-feature="straight-cable">
+          <div
+            class="option-item"
+            data-feature="straightCable"
+            data-category="cable"
+          >
+            <div class="option">
               <img src="./images/straight-cable.svg" alt="" />
             </div>
             <h3>Straight cable</h3>
-            <h4>This item can change colors</h4>
           </div>
         </div>
         <span class="subheading">Wrist rest</span>
-        <div class="the-item">
-          <div class="option" data-feature="wrist-rest">
-            <img src="./images/wrist-rest.svg" alt="" />
+        <div class="option-container">
+          <div
+            class="option-item"
+            data-feature="wristRest"
+            data-category="wristRest"
+          >
+            <div class="option">
+              <img src="./images/wrist-rest.svg" alt="" />
+            </div>
+            <h3>Wrist rest</h3>
           </div>
-          <h3>Wrist rest</h3>
-          <h4>This item can change colors</h4>
         </div>
       </div>
     </div>

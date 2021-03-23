@@ -1,3 +1,13 @@
+.header--configurator .logo {
+  width: 120px;
+  position: static;
+  transform: unset;
+}
+.header--configurator {
+  padding: 40px 0;
+  justify-content: space-between;
+}
+
 .config-container {
   display: flex;
   align-items: center;
@@ -7,7 +17,6 @@
     rgba(255, 255, 255, 1) 0%,
     rgba(240, 240, 240, 1) 100%
   );
-  height: 760px;
   margin: auto;
   -webkit-box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
   -moz-box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
@@ -34,25 +43,38 @@ h4 {
   font-weight: 300;
   max-width: 100px;
 }
+
+.subheading {
+  display: block;
+  padding-bottom: 14px;
+}
+
 .option img {
   max-width: 150px;
   max-height: 75px;
   margin-bottom: 10px;
 }
 
-.cases-container {
+.option-container {
   display: flex;
   margin-bottom: 40px;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 700px;
 }
-.the-item {
+.option-item {
   padding: 20px;
+  border: 3px solid transparent;
+  margin-right: 14px;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.cables-container {
-  display: flex;
-  margin-bottom: 40px;
+.option-item:hover,
+.option-item.active {
+  border: 3px solid lightgrey;
 }
 
 .keyboard {
