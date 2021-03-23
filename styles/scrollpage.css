@@ -11,16 +11,24 @@
 body {
   font-family: var(--primary-font);
 }
+
+.header--configurator .logo {
+  width: 120px;
+  position: static;
+  transform: unset;
+}
+.header--configurator {
+  padding: 40px 0;
+  justify-content: space-between;
+}
 .wrapper {
-  max-width: 1450px;
+  max-width: 1400px;
   margin: 0px auto;
 }
-
 header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 60px 0;
 }
 
 nav ul {
@@ -34,13 +42,6 @@ nav ul li a {
   padding-right: 20px;
   font-family: var(--primary-font);
   font-weight: 700;
-}
-
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 190px;
 }
 
 main {
