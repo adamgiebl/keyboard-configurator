@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 744.57 442.86">
+  <defs>
+    <clipPath id="clip-path" transform="translate(13.54 9.28)">
+      <path d="M4.8,227.9,66.4,7.5a4.08,4.08,0,0,1,5-2.8L712.8,189.4a3.46,3.46,0,0,1,2.4,4.4L650.8,414.4a3.65,3.65,0,0,1-4.6,2.5L7.8,233.3A4.38,4.38,0,0,1,4.8,227.9Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-path)">
+    <g style="isolation: isolate">
+      <image id="Ducky-One-2-Mini-RGB-Mechanical-Gaming-Keyboard" width="700" height="260" transform="matrix(0.96, 0.28, -0.28, 0.96, 71.66, 0)" xlink:href="944AB0BEACF19B56.png" style="isolation: isolate"/>
+    </g>
+  </g>
+</svg>
