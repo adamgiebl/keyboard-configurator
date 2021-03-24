@@ -27,6 +27,9 @@ const colors = {
   coiledCable: ["blue", "red", "green"],
   metalCase: ["yellow", "red", "green"],
   wristRest: ["blue", "red", "green"],
+  keycapsMid: ["yellow", "red", "green"],
+  keycapsRight: ["yellow", "red", "green"],
+  keycapsLeft: ["yellow", "red", "green"],
 };
 
 async function init() {
@@ -37,11 +40,35 @@ async function init() {
   const svg = document.querySelector("#keyboard");
   SVG = svg;
 
-  const groups = svg.querySelectorAll("g:not(.shadow)");
+  const groups = svg.querySelectorAll("g:not(.shadow, .keycaps)");
 
   groups.forEach((g) => {
     g.addEventListener("click", () => {
-      g.style.color = "red";
+      const clickedFeature = g.id;
+      console.log(clickedFeature);
+
+      const optionItems = document.querySelectorAll(".option-item");
+      optionItems.forEach((item) => {
+        item.classList.remove("focused");
+      });
+
+      groups.forEach((g) => {
+        g.classList.remove("focused");
+      });
+
+      g.classList.add("focused");
+
+      const activeOptionItem = document.querySelector(
+        `.option-item[data-feature=${clickedFeature}]`
+      );
+
+      if (activeOptionItem) {
+        activeOptionItem.classList.add("focused");
+      }
+
+      selectedOption = clickedFeature;
+
+      showColors(clickedFeature);
     });
   });
 
@@ -51,14 +78,13 @@ async function init() {
     const feature = item.dataset.feature;
     item.addEventListener("click", () => {
       updateItemState(category, feature);
+      selectedOption = feature;
 
       if (features[category][feature]) {
-        item.classList.add("active");
+        item.classList.add("focused", "active");
       } else {
         item.classList.remove("active");
       }
-
-      console.log(features);
     });
   });
 
@@ -68,6 +94,7 @@ async function init() {
 function updateItemState(category, feature) {
   const optionItems = document.querySelectorAll(".option-item");
   optionItems.forEach((item) => {
+    item.classList.remove("focused");
     if (item.dataset.category === category) {
       item.classList.remove("active");
     }
@@ -78,7 +105,7 @@ function updateItemState(category, feature) {
   });
 
   features[category][feature] = !features[category][feature];
-  console.log(feature);
+
   showColors(feature);
   updateSVGState();
 }
@@ -103,7 +130,7 @@ function updateSVGState() {
 
 function showColors(feature) {
   const colorPicker = document.querySelector(".color-picker");
-  console.log(feature);
+  runAnimationOnce(colorPicker, "jumpout");
   colorPicker.innerHTML = "";
 
   if (!colors[feature]) return;
@@ -112,6 +139,7 @@ function showColors(feature) {
     const colorElement = document.createElement("div");
     colorElement.classList.add("color");
     colorElement.style.setProperty("--color", colorCode);
+    colorElement.dataset.value = colorCode;
     colorPicker.appendChild(colorElement);
   });
 
@@ -121,7 +149,18 @@ function showColors(feature) {
         color.classList.remove("active");
       });
       color.classList.add("active");
+      console.log("selectedOption", selectedOption);
+      SVG.querySelector(`#${selectedOption}`).style.color = color.dataset.value;
     });
+  });
+}
+
+function runAnimationOnce(element, className, callback = () => {}) {
+  if (!element) return;
+  element.classList.add(className);
+  element.addEventListener("animationend", () => {
+    element.classList.remove(className);
+    callback();
   });
 }
 
