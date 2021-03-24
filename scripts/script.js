@@ -9,11 +9,12 @@ let SVG = null;
 const features = {
   case: {
     metalCase: false,
-    plasticCase: false,
+    plasticCase: true,
   },
   cable: {
-    coiledCable: false,
+    coiledCable: true,
     straightCable: false,
+    wireless: false,
   },
   wristRest: {
     wristRest: false,
@@ -24,7 +25,7 @@ const colors = {
   plasticCase: ["blue", "red", "green"],
   keycaps: ["green", "limegreen", "skyblue"],
   coiledCable: ["blue", "red", "green"],
-  metalCase: ["blue", "red", "green"],
+  metalCase: ["yellow", "red", "green"],
   wristRest: ["blue", "red", "green"],
 };
 
@@ -36,9 +37,6 @@ async function init() {
   const svg = document.querySelector("#keyboard");
   SVG = svg;
 
-  hideMetalCase(svg);
-  hideCable(svg);
-
   const groups = svg.querySelectorAll("g:not(.shadow)");
 
   groups.forEach((g) => {
@@ -46,8 +44,6 @@ async function init() {
       g.style.color = "red";
     });
   });
-
-  const colorPicker = document.querySelector(".color-picker");
 
   const optionItems = document.querySelectorAll(".option-item");
   optionItems.forEach((item) => {
@@ -65,6 +61,8 @@ async function init() {
       console.log(features);
     });
   });
+
+  updateSVGState();
 }
 
 function updateItemState(category, feature) {
@@ -76,11 +74,12 @@ function updateItemState(category, feature) {
   });
   const featuresInCategory = Object.keys(features[category]);
   featuresInCategory.forEach((featureKey) => {
-    features[category][featureKey] = false;
+    if (featureKey !== "wristRest") features[category][featureKey] = false;
   });
 
   features[category][feature] = !features[category][feature];
-
+  console.log(feature);
+  showColors(feature);
   updateSVGState();
 }
 
@@ -90,21 +89,40 @@ function updateSVGState() {
   allCategoryKeys.forEach((categoryKey) => {
     const allFeatureKeys = Object.keys(features[categoryKey]);
     allFeatureKeys.forEach((featureKey) => {
-      if (features[categoryKey][featureKey]) {
-        SVG.querySelector(`#${featureKey}`).style.display = "block";
-      } else {
-        SVG.querySelector(`#${featureKey}`).style.display = "none";
+      const svgElement = SVG.querySelector(`#${featureKey}`);
+      if (svgElement) {
+        if (features[categoryKey][featureKey]) {
+          svgElement.style.display = "block";
+        } else {
+          svgElement.style.display = "none";
+        }
       }
     });
   });
 }
 
-function hideMetalCase(svg) {
-  svg.querySelector("#metalCase").style.display = "none";
-}
+function showColors(feature) {
+  const colorPicker = document.querySelector(".color-picker");
+  console.log(feature);
+  colorPicker.innerHTML = "";
 
-function hideCable(svg) {
-  svg.querySelector("#straightCable").style.display = "none";
+  if (!colors[feature]) return;
+
+  colors[feature].forEach((colorCode) => {
+    const colorElement = document.createElement("div");
+    colorElement.classList.add("color");
+    colorElement.style.setProperty("--color", colorCode);
+    colorPicker.appendChild(colorElement);
+  });
+
+  colorPicker.querySelectorAll(".color").forEach((color) => {
+    color.addEventListener("click", () => {
+      colorPicker.querySelectorAll(".color").forEach((color) => {
+        color.classList.remove("active");
+      });
+      color.classList.add("active");
+    });
+  });
 }
 
 init();
