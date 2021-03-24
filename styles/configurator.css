@@ -137,3 +137,16 @@ g.focused {
   border: 5px solid black;
   transform: scale(1.1);
 }
+
+.selectedFeatures {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 30px;
+}
+
+.selectedFeature img {
+  height: 50px;
+  margin-right: 20px;
+}

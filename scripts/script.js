@@ -33,7 +33,7 @@ const colors = {
 };
 
 async function init() {
-  const res = await fetch("./images/KeyboardMod.svg");
+  const res = await fetch("./images/mainSvg/KeyboardMod.svg");
   const svgText = await res.text();
   keyboardContainer.innerHTML += svgText;
 
@@ -76,7 +76,7 @@ async function init() {
   optionItems.forEach((item) => {
     const category = item.dataset.category;
     const feature = item.dataset.feature;
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (e) => {
       updateItemState(category, feature);
       selectedOption = feature;
 
@@ -85,10 +85,54 @@ async function init() {
       } else {
         item.classList.remove("active");
       }
+
+      if (
+        !document.querySelector(`.selectedFeature[data-feature=${feature}]`)
+      ) {
+        addToSelected(e.target, feature, category);
+      }
     });
   });
 
   updateSVGState();
+}
+
+function addToSelected(target, feature, category) {
+  const selectedFeature = createFeatureElement(feature, category);
+  document.querySelector(".selectedFeatures").appendChild(selectedFeature);
+
+  const startPos = target.getBoundingClientRect();
+  console.log(startPos);
+
+  const endPos = selectedFeature.getBoundingClientRect();
+
+  const difX =
+    startPos.left - endPos.left + startPos.width / 2 - endPos.width / 2;
+  const difY =
+    startPos.top - endPos.top + startPos.height / 2 - endPos.height / 2;
+
+  selectedFeature.style.transform = `translate(${difX}px, ${difY}px)`;
+
+  requestAnimationFrame(() => {
+    selectedFeature.style.transition = `all 0.5s linear`;
+    selectedFeature.style.transform = `translate(0, 0)`;
+  });
+}
+
+function createFeatureElement(feature, category) {
+  const div = document.createElement("div");
+  div.classList.add("selectedFeature");
+  div.dataset.feature = feature;
+
+  div.dataset.category = category;
+
+  const img = document.createElement("img");
+  img.src = `./images/features/${feature}.svg`;
+  img.alt = feature;
+
+  div.append(img);
+
+  return div;
 }
 
 function updateItemState(category, feature) {
@@ -97,8 +141,20 @@ function updateItemState(category, feature) {
     item.classList.remove("focused");
     if (item.dataset.category === category) {
       item.classList.remove("active");
+
+      if (
+        document.querySelectorAll(`.selectedFeature[data-category=${category}]`)
+          .length > 0
+      ) {
+        document
+          .querySelectorAll(`.selectedFeature[data-category=${category}]`)
+          .forEach((item) => {
+            item.remove();
+          });
+      }
     }
   });
+
   const featuresInCategory = Object.keys(features[category]);
   featuresInCategory.forEach((featureKey) => {
     if (featureKey !== "wristRest") features[category][featureKey] = false;
