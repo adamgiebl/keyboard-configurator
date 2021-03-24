@@ -76,7 +76,7 @@ async function init() {
   optionItems.forEach((item) => {
     const category = item.dataset.category;
     const feature = item.dataset.feature;
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (e) => {
       updateItemState(category, feature);
       selectedOption = feature;
 
@@ -86,15 +86,19 @@ async function init() {
         item.classList.remove("active");
       }
 
-      addToSelected();
+      if (
+        !document.querySelector(`.selectedFeature[data-feature=${feature}]`)
+      ) {
+        addToSelected(e.target, feature, category);
+      }
     });
   });
 
   updateSVGState();
 }
 
-function addToSelected() {
-  const selectedFeature = createFeatureElement(feature);
+function addToSelected(target, feature, category) {
+  const selectedFeature = createFeatureElement(feature, category);
   document.querySelector(".selectedFeatures").appendChild(selectedFeature);
 
   const startPos = target.getBoundingClientRect();
@@ -115,13 +119,15 @@ function addToSelected() {
   });
 }
 
-function createFeatureElement(feature) {
+function createFeatureElement(feature, category) {
   const div = document.createElement("div");
   div.classList.add("selectedFeature");
   div.dataset.feature = feature;
 
+  div.dataset.category = category;
+
   const img = document.createElement("img");
-  img.src = `./${feature}.svg`;
+  img.src = `./images/features/${feature}.svg`;
   img.alt = feature;
 
   div.append(img);
@@ -135,8 +141,20 @@ function updateItemState(category, feature) {
     item.classList.remove("focused");
     if (item.dataset.category === category) {
       item.classList.remove("active");
+
+      if (
+        document.querySelectorAll(`.selectedFeature[data-category=${category}]`)
+          .length > 0
+      ) {
+        document
+          .querySelectorAll(`.selectedFeature[data-category=${category}]`)
+          .forEach((item) => {
+            item.remove();
+          });
+      }
     }
   });
+
   const featuresInCategory = Object.keys(features[category]);
   featuresInCategory.forEach((featureKey) => {
     if (featureKey !== "wristRest") features[category][featureKey] = false;
