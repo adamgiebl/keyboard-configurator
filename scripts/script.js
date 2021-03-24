@@ -33,7 +33,7 @@ const colors = {
 };
 
 async function init() {
-  const res = await fetch("./images/KeyboardMod.svg");
+  const res = await fetch("./images/mainSvg/KeyboardMod.svg");
   const svgText = await res.text();
   keyboardContainer.innerHTML += svgText;
 
@@ -85,10 +85,48 @@ async function init() {
       } else {
         item.classList.remove("active");
       }
+
+      addToSelected();
     });
   });
 
   updateSVGState();
+}
+
+function addToSelected() {
+  const selectedFeature = createFeatureElement(feature);
+  document.querySelector(".selectedFeatures").appendChild(selectedFeature);
+
+  const startPos = target.getBoundingClientRect();
+  console.log(startPos);
+
+  const endPos = selectedFeature.getBoundingClientRect();
+
+  const difX =
+    startPos.left - endPos.left + startPos.width / 2 - endPos.width / 2;
+  const difY =
+    startPos.top - endPos.top + startPos.height / 2 - endPos.height / 2;
+
+  selectedFeature.style.transform = `translate(${difX}px, ${difY}px)`;
+
+  requestAnimationFrame(() => {
+    selectedFeature.style.transition = `all 0.5s linear`;
+    selectedFeature.style.transform = `translate(0, 0)`;
+  });
+}
+
+function createFeatureElement(feature) {
+  const div = document.createElement("div");
+  div.classList.add("selectedFeature");
+  div.dataset.feature = feature;
+
+  const img = document.createElement("img");
+  img.src = `./${feature}.svg`;
+  img.alt = feature;
+
+  div.append(img);
+
+  return div;
 }
 
 function updateItemState(category, feature) {
