@@ -25,17 +25,9 @@
     </header>
     <div class="config-container wrapper">
       <svg
+        class="wave"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        style="
-          position: fixed;
-          z-index: 1;
-          width: 100%;
-          bottom: 0px;
-          width: 100vw;
-          left: 0;
-          pointer-events: none;
-        "
       >
         <path
           fill="#0099ff"
@@ -49,29 +41,6 @@
         <div class="selectedFeatures"></div>
       </div>
       <div class="options slide-up">
-        <span class="subheading">Cases</span>
-        <div class="option-container">
-          <div
-            class="option-item"
-            data-feature="metalCase"
-            data-category="case"
-          >
-            <div class="option">
-              <img src="./images/features/metalCase.svg" alt="" />
-            </div>
-            <h3>Metal case</h3>
-          </div>
-          <div
-            class="option-item active"
-            data-feature="plasticCase"
-            data-category="case"
-          >
-            <div class="option">
-              <img src="./images/features/plasticCase.svg" alt="" />
-            </div>
-            <h3>Plastic case</h3>
-          </div>
-        </div>
         <span class="subheading">Cables</span>
         <div class="option-container">
           <div
@@ -105,6 +74,30 @@
             <h3>Straight cable</h3>
           </div>
         </div>
+        <span class="subheading">Cases</span>
+        <div class="option-container">
+          <div
+            class="option-item"
+            data-feature="metalCase"
+            data-category="case"
+          >
+            <div class="option">
+              <img src="./images/features/metalCase.svg" alt="" />
+            </div>
+            <h3>Metal case</h3>
+          </div>
+          <div
+            class="option-item active"
+            data-feature="plasticCase"
+            data-category="case"
+          >
+            <div class="option">
+              <img src="./images/features/plasticCase.svg" alt="" />
+            </div>
+            <h3>Plastic case</h3>
+          </div>
+        </div>
+
         <span class="subheading">Wrist rest</span>
         <div class="option-container">
           <div
@@ -120,26 +113,6 @@
         </div>
       </div>
     </div>
-    <svg
-      width="100"
-      height="50"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <style type="text/css">
-        rect {
-          fill: url(#MyGradient);
-        }
-      </style>
-      <defs>
-        <linearGradient id="MyGradient">
-          <stop offset="5%" stop-color="#F60" />
-          <stop offset="95%" stop-color="#FF6" />
-        </linearGradient>
-      </defs>
-
-      <rect width="100" height="50" />
-    </svg>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
