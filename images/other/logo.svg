@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="214" height="78" viewBox="0 0 214 78">
-  <g id="Group_43" data-name="Group 43" transform="translate(-2360 -4395)">
-    <text id="_ME_CHA_NI_CAL_KEY_BO_ARD_" data-name="  ME   CHA    ¨
+<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="214" height="78" viewBox="0 0 214 78">
+  <text id="_ME_CHA_NI_CAL_KEY_BO_ARD_" data-name="  ME   CHA    ¨
 NI   CAL  KEY   
-    BO  ARD " transform="translate(2386 4407)" fill="#fff" font-size="18" font-family="SourceCodePro-Bold, Source Code Pro" font-weight="700"><tspan fill="#000"><tspan x="0" y="18" xml:space="preserve">  ME   CHA    ¨</tspan></tspan><tspan x="0" y="33" fill="#000">NI</tspan><tspan y="33" xml:space="preserve" fill="#fff">   </tspan><tspan y="33" fill="#000">CAL</tspan><tspan y="33" xml:space="preserve" fill="#fff">  </tspan><tspan y="33" fill="#000">KEY</tspan><tspan y="33" xml:space="preserve" fill="#fff">   </tspan><tspan x="0" y="48" xml:space="preserve" fill="#fff">    </tspan><tspan y="48" xml:space="preserve" fill="#000">BO  ARD</tspan><tspan y="48" fill="#fff"> </tspan></text>
-    <line id="Line_6" data-name="Line 6" x2="17.478" transform="translate(2527.022 4452.717)" fill="none" stroke="#000" stroke-width="3"/>
-    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(2360 4395)" fill="none" stroke="#000" stroke-width="3">
-      <rect width="214" height="78" stroke="none"/>
-      <rect x="1.5" y="1.5" width="211" height="75" fill="none"/>
-    </g>
+    BO  ARD " transform="translate(26 12)" fill="#fff" font-size="18" font-family="SourceCodePro-Bold, Source Code Pro" font-weight="700"><tspan fill="#000"><tspan x="0" y="18" xml:space="preserve">  ME   CHA    ¨</tspan></tspan><tspan x="0" y="33" fill="#000">NI</tspan><tspan y="33" xml:space="preserve" fill="#fff">   </tspan><tspan y="33" fill="#000">CAL</tspan><tspan y="33" xml:space="preserve" fill="#fff">  </tspan><tspan y="33" fill="#000">KEY</tspan><tspan y="33" xml:space="preserve" fill="#fff">   </tspan><tspan x="0" y="48" xml:space="preserve" fill="#fff">    </tspan><tspan y="48" xml:space="preserve" fill="#000">BO  ARD</tspan><tspan y="48" fill="#fff"> </tspan></text>
+  <line id="Line_6" data-name="Line 6" x2="17.478" transform="translate(167.022 57.717)" fill="none" stroke="#000" stroke-width="3"/>
+  <g id="Rectangle_2" data-name="Rectangle 2" fill="none" stroke="#000" stroke-width="3">
+    <rect width="214" height="78" stroke="none"/>
+    <rect x="1.5" y="1.5" width="211" height="75" fill="none"/>
   </g>
 </svg>
