@@ -29,7 +29,7 @@ body {
 .options {
   padding: 30px;
   background: floralwhite;
-  align-self: flex-start;
+  align-self: stretch;
 }
 
 .keyboard {
@@ -40,18 +40,18 @@ body {
   align-self: stretch;
   position: relative;
   z-index: 3;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .option img {
-  max-width: 150px;
-  max-height: 75px;
+  max-width: 131px;
+  max-height: 52px;
   margin-bottom: 10px;
 }
 
 .option-container {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 22px;
   justify-content: flex-start;
   max-width: 700px;
 }
@@ -61,9 +61,10 @@ body {
 }
 
 .option-item {
-  padding: 20px;
+  padding: 12px;
   border: 3px solid transparent;
   margin-right: 14px;
+  border-radius: 10px;
   transition: all 0.3s;
   cursor: pointer;
   display: flex;
@@ -73,7 +74,7 @@ body {
 
 .option-item:hover,
 .option-item.active {
-  border: 3px solid black;
+  border: 3px solid mediumturquoise;
 }
 
 .option-item.focused {
@@ -82,7 +83,7 @@ body {
 
 h3 {
   font-family: var(--primary-font);
-  font-size: 16px;
+  font-size: 15px;
 }
 h4 {
   font-family: var(--primary-font);
@@ -97,13 +98,14 @@ h4 {
   color: black;
 }
 
-svg {
+svg#keyboard {
   display: block;
-  width: 600px;
   height: auto;
+  width: 44vw;
+  max-width: 600px;
 }
 
-svg g:not(.shadow, .keycaps):hover {
+svg#keyboard g:not(.shadow, .keycaps):hover {
   filter: contrast(0.5);
   cursor: pointer;
 }
