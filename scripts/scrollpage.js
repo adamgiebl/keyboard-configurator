@@ -56,3 +56,27 @@ function isCardVisible() {
 document.addEventListener("DOMContentLoaded", isCardVisible);
 window.addEventListener("scroll", isCardVisible);
 window.addEventListener("resize", isCardVisible); */
+
+/////////// Parallax /////////
+/* gsap.to(".slower", {
+  y: -100,
+  ease: "none",
+  scrollTrigger: {
+    markers: true,
+    trigger: "#section_2",
+    // start: "top bottom", // the default values
+    // end: "bottom top",
+    scrub: true,
+  },
+});
+gsap.to(".faster", {
+  y: 500,
+  ease: "none",
+  scrollTrigger: {
+    markers: true,
+    trigger: "#section_2",
+    // start: "top bottom", // the default values
+    // end: "bottom top",
+    scrub: true,
+  },
+}); */
