@@ -4,7 +4,7 @@ body {
 }
 
 .header--configurator .logo {
-  width: 120px;
+  width: 150px;
   position: static;
   transform: unset;
 }
