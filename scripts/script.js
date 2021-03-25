@@ -20,16 +20,15 @@ const features = {
     wristRest: false,
   },
 };
-
+const c = ["#ef476f", "#ffd166", "#06d6a0", "#118ab2", "#073b4c", "ghostwhite"];
 const colors = {
-  plasticCase: ["blue", "red", "green"],
-  keycaps: ["green", "limegreen", "skyblue"],
-  coiledCable: ["blue", "red", "green"],
-  metalCase: ["yellow", "red", "green"],
-  wristRest: ["blue", "red", "green"],
-  keycapsMid: ["yellow", "red", "green"],
-  keycapsRight: ["yellow", "red", "green"],
-  keycapsLeft: ["yellow", "red", "green"],
+  plasticCase: c,
+  coiledCable: c,
+  metalCase: c,
+  wristRest: c,
+  keycapsMid: c,
+  keycapsRight: c,
+  keycapsLeft: c,
 };
 
 async function init() {
