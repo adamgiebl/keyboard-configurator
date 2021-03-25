@@ -35,38 +35,7 @@ nav ul li a {
   font-family: var(--primary-font);
   font-weight: 700;
 }
-@media only screen and (max-width: 570px) {
-  header {
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-  }
-  .logo {
-    padding-bottom: 20px;
-    width: 190px;
-  }
-  body #cooltext {
-    max-width: 400px;
-    font-size: 27px;
-  }
-  .mechanical-switch {
-    flex-wrap: wrap;
-  }
-  .mechanical-switch img {
-    width: 400px;
-  }
-  .rgb-backlight {
-    flex-wrap: wrap-reverse;
-  }
-  .rgb-backlight img {
-    width: 400px;
-  }
-  .additional-features {
-    flex-wrap: wrap;
-  }
-  .footer {
-    flex-wrap: wrap;
-  }
-}
+
 /*/////////////       SECTIONS ONE-FIVE        //////////////// */
 #section-one {
   background: #b6ffcd;
@@ -292,3 +261,37 @@ main {
 .card:first-child {
   margin-left: 6vw;
 } */
+/*///////////////////     Media queries     ////////////////////////*/
+
+@media only screen and (max-width: 570px) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+  }
+  .logo {
+    padding-bottom: 20px;
+    width: 190px;
+  }
+  body #cooltext {
+    max-width: 400px;
+    font-size: 27px;
+  }
+  .mechanical-switch {
+    flex-wrap: wrap;
+  }
+  .mechanical-switch img {
+    width: 400px;
+  }
+  .rgb-backlight {
+    flex-wrap: wrap-reverse;
+  }
+  .rgb-backlight img {
+    width: 400px;
+  }
+  .additional-features {
+    flex-wrap: wrap;
+  }
+  .footer {
+    flex-wrap: wrap;
+  }
+}

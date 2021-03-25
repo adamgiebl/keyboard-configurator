@@ -221,3 +221,14 @@ g.focused {
     margin-right: 15px;
   }
 }
+
+@media only screen and (max-width: 570px) {
+  .header--configurator {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+  }
+  .logo {
+    padding-bottom: 20px;
+    width: 190px;
+  }
+}
