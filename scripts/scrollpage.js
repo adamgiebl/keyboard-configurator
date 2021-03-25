@@ -1,6 +1,7 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", animateText);
+
 ////////////////////   Animate text like Peter's coolText animation ///////////////
 function animateText() {
   const coolText = document.querySelector("#cooltext");
