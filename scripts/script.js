@@ -20,15 +20,22 @@ const features = {
     wristRest: false,
   },
 };
-const c = ["#ef476f", "#ffd166", "#06d6a0", "#118ab2", "#073b4c", "ghostwhite"];
+const common = [
+  "#ef476f",
+  "#ffd166",
+  "#06d6a0",
+  "#118ab2",
+  "#073b4c",
+  "ghostwhite",
+];
 const colors = {
-  plasticCase: c,
-  coiledCable: c,
-  metalCase: c,
-  wristRest: c,
-  keycapsMid: c,
-  keycapsRight: c,
-  keycapsLeft: c,
+  plasticCase: common,
+  coiledCable: common,
+  metalCase: common,
+  wristRest: ["#b37447", "#f4bc7c", "#ffd5a5"],
+  keycapsMid: common,
+  keycapsRight: common,
+  keycapsLeft: common,
 };
 
 async function init() {
@@ -44,7 +51,6 @@ async function init() {
   groups.forEach((g) => {
     g.addEventListener("click", () => {
       const clickedFeature = g.id;
-      console.log(clickedFeature);
 
       const optionItems = document.querySelectorAll(".option-item");
       optionItems.forEach((item) => {
@@ -86,7 +92,8 @@ async function init() {
       }
 
       if (
-        !document.querySelector(`.selectedFeature[data-feature=${feature}]`)
+        !document.querySelector(`.selectedFeature[data-feature=${feature}]`) &&
+        features[category][feature]
       ) {
         addToSelected(e.target, feature, category);
       }
@@ -161,7 +168,13 @@ function updateItemState(category, feature) {
 
   features[category][feature] = !features[category][feature];
 
-  showColors(feature);
+  if (features[category][feature]) {
+    showColors(feature);
+  } else {
+    const colorPicker = document.querySelector(".color-picker");
+    colorPicker.innerHTML = "";
+  }
+
   updateSVGState();
 }
 
@@ -204,7 +217,6 @@ function showColors(feature) {
         color.classList.remove("active");
       });
       color.classList.add("active");
-      console.log("selectedOption", selectedOption);
       SVG.querySelector(`#${selectedOption}`).style.color = color.dataset.value;
     });
   });
