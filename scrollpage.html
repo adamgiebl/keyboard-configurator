@@ -19,27 +19,19 @@
       </nav>
       <img class="logo" src="./images/logo.svg" alt="mechanical keyboard" />
     </header>
-    <main class="wrapper">
-      <div class="cta">
-        <h1>A mechanical keyboard tailored to your needs</h1>
-        <h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-          doloremque rem placeat dolore, reiciendis quos tempore ut. Repellendus
-          laudantium ipsa, vitae, optio dolorum iste voluptatum ullam est totam
-          perspiciatis minus.
-        </h3>
+    <main class="section wrapper">
+      <div class="hero">
+        <h1 id="cooltext">A mechanical keyboard tailored to your needs</h1>
         <a href="./configurator.html">DESIGN YOUR OWN</a>
       </div>
-      <img
-        src="./images/MK-cover.svg"
-        alt="white mechanical keyboard with a brown case and wooden wrist rest"
-      />
     </main>
-    <section class="mechanical-switches wrapper">
-      <img src="./images/blue-switch.gif" alt="mechanical switch gif" />
-      <div class="cta ms">
-        <h1>Mechanical switch</h1>
-        <h3>
+    <section class="section mechanical-switch">
+      <img src="./images/blue-switch.gif" alt="ms gif" />
+      <div>
+        <h1 class="section-heading" data-duration="1" data-scrollTrigger>
+          Mechanical switch
+        </h1>
+        <h3 class="section-desc" data-duration="2" data-scrollTrigger>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
           doloremque rem placeat dolore, reiciendis quos tempore ut. Repellendus
           laudantium ipsa, vitae, optio dolorum iste voluptatum ullam est totam
@@ -47,10 +39,12 @@
         </h3>
       </div>
     </section>
-    <section class="mechanical-switches wrapper">
-      <div class="cta ms">
-        <h1>RGB backlight</h1>
-        <h3>
+    <section class="section rgb-backlight">
+      <div class="section-text">
+        <h1 class="section-heading" data-duration="1" data-scrollTrigger>
+          RGB backlight
+        </h1>
+        <h3 class="section-desc" data-duration="2" data-scrollTrigger>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
           doloremque rem placeat dolore, reiciendis quos tempore ut. Repellendus
           laudantium ipsa, vitae, optio dolorum iste voluptatum ullam est totam
@@ -58,14 +52,15 @@
         </h3>
       </div>
       <img
+        data-duration="3"
+        data-scrollTrigger
         src="./images/RGB-MechanicalKeyboard.png"
         alt="mechanical switch gif"
       />
     </section>
-
-    <section class="ad-feat wrapper">
-      <h1>Additional features</h1>
-      <div class="additional-features wrapper">
+    <section class="section ad-feat">
+      <h1 class="section-heading">Additional features</h1>
+      <div class="additional-features" data-duration="2" data-scrollTrigger>
         <div class="additional-item">
           <img src="./images/signal.svg" alt="signal" />
           <h3>Wired or wireless</h3>
@@ -84,12 +79,32 @@
         </div>
       </div>
     </section>
+    <!-- Simple horizontal scroll-->
+    <!-- <div class="cards-container">
+      <div class="card">
+        <img src="./images/signal.svg" />
+        <h2 class="card-title">Wired or wireless</h2>
+      </div>
+      <div class="card">
+        <img src="./images/cap.svg" />
+        <h2 class="card-title">PBT keycaps</h2>
+      </div>
+      <div class="card">
+        <img src="./images/usb-c.svg" />
+        <h2 class="card-title">USB type-C</h2>
+      </div>
+      <div class="card">
+        <img src="./images/macro-keys.svg" />
+        <h2 class="card-title">Custom macro keys</h2>
+      </div>
+    </div> -->
     <footer class="footer wrapper">
       <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="configurator.html">CONFIGURATOR</a></li>
         <li><a href="scrollpage.html">SCROLLPAGE</a></li>
-        <li><a href="#">TERMS AND CONDITIONS AND PRIVACY POLICY</a></li>
+        <li><a href="#">TERMS AND CONDITIONS</a></li>
+        <li><a href="#">PRIVACY POLICY</a></li>
       </ul>
       <img
         class="footer-logo"
@@ -97,6 +112,9 @@
         alt="mechanical-keyboard logo"
       />
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/scrollpage.js"></script>
   </body>
 </html>
