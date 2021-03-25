@@ -13,15 +13,6 @@ body {
   background-repeat: no-repeat;
 }
 /* /////////// HEADER //////////////// */
-.header--configurator .logo {
-  width: 150px;
-  position: static;
-  transform: unset;
-}
-.header--configurator {
-  padding: 40px 0;
-  justify-content: space-between;
-}
 .wrapper {
   max-width: 1400px;
   margin: 0px auto;
@@ -30,6 +21,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 60px 20px;
+  justify-content: space-between;
 }
 nav ul {
   list-style: none;
@@ -43,13 +36,30 @@ nav ul li a {
   font-weight: 700;
 }
 
+/*/////////////       SECTIONS ONE-FIVE        //////////////// */
+#section-one {
+  background: #b6ffcd;
+  /* background-color: #b6ffcd; */
+  background-size: cover;
+}
 #section-two {
   background-color: #e4d9fe;
 }
 #section-three {
   background-color: white;
 }
-
+#section-four {
+  background-color: #b6ffcd;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#section-five {
+  background: floralwhite;
+  height: 100vh;
+}
 main {
   height: 100vh;
   margin: auto;
@@ -66,10 +76,7 @@ main {
 }
 
 /* //////////// HERO SECTION ///////// */
-#section-one {
-  background-color: #b6ffcd;
-  background-size: cover;
-}
+
 #cooltext {
   font-family: var(--primary-font);
   max-width: 600px;
@@ -126,17 +133,15 @@ main {
 
 /* /////////// ADDITIONAL FEATURES SECTION ////////////*/
 
-#section-four {
-  background-color: #b6ffcd;
-  height: 100vh;
-}
 #section-four .section-heading {
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .additional-features {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .additional-features .feature {
   margin: 0 35px;
@@ -149,10 +154,7 @@ main {
   height: 100px;
 }
 /* /////////// FOOTER SECTION ////////////*/
-#section-five {
-  background: floralwhite;
-  height: 100vh;
-}
+
 .footer {
   display: flex;
   align-items: center;
