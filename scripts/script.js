@@ -20,21 +20,7 @@ const features = {
     wristRest: false,
   },
 };
-const c = ["#ef476f", "#ffd166", "#06d6a0", "#118ab2", "#073b4c", "ghostwhite"];[
-  "#ef476f",
-  "#ffd166",
-  "#06d6a0",
-  "#118ab2",
-  "#073b4c",
-  "ghostwhite",
-],[
-  "#ef476f",
-  "#ffd166",
-  "#06d6a0",
-  "#118ab2",
-  "#073b4c",
-  "ghostwhite",
-],
+const c = ["#ef476f", "#ffd166", "#06d6a0", "#118ab2", "#073b4c", "ghostwhite"];
 const colors = {
   plasticCase: c,
   coiledCable: c,

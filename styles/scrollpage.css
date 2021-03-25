@@ -43,8 +43,6 @@ nav ul li a {
   font-weight: 700;
 }
 
-
-
 #section-two {
   background-color: #fb5435;
 }
@@ -60,18 +58,18 @@ main {
   justify-content: center;
 }
 .section {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    padding: 30px;
-    min-height: 50vh;
-  }
-  
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding: 30px;
+  min-height: 50vh;
+}
+
 /* //////////// HERO SECTION ///////// */
 #section-one {
-    background-color: #b6ffcd;
-    background-size: cover;
-  }
+  background-color: #b6ffcd;
+  background-size: cover;
+}
 #cooltext {
   font-family: var(--primary-font);
   max-width: 600px;
@@ -137,13 +135,17 @@ main {
 }
 
 .additional-features {
-    display
+  display: flex;
 }
 /* /////////// FOOTER SECTION ////////////*/
+#section-five {
+  background: white;
+  height: 100vh;
+}
 .footer {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
   padding-bottom: 50px;
 }
 .footer ul {

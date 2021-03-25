@@ -21,7 +21,7 @@ function animateText() {
 }
 
 ////////////// Text easing in from bottom /////////////
-gsap.registerPlugin(ScrollTrigger);
+g   sap.registerPlugin(ScrollTrigger);
 document.querySelectorAll("[data-scrollTrigger]").forEach((el) => {
   console.log(el, el.dataset.duration);
   gsap.from(el, {
