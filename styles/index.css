@@ -10,11 +10,7 @@
 }
 
 body {
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(213, 213, 213, 1) 100%
-  );
+  background: ghostwhite;
 }
 
 .wrapper {
@@ -26,6 +22,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   padding: 60px 20px;
+  justify-content: space-between;
 }
 nav ul {
   list-style: none;
@@ -40,14 +37,10 @@ nav ul li a {
 }
 
 .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   width: 190px;
 }
 
 main {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,6 +92,19 @@ main img {
 @keyframes jumpout {
   from {
     transform: translateY(-120px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slide-up 0.7s cubic-bezier(0.17, 0.67, 0.68, 1.19);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
   }
   to {
     transform: translateY(0);
