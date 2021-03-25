@@ -15,6 +15,7 @@ body {
 
 .config-container {
   display: flex;
+  justify-content: center;
   margin: auto;
   height: calc(100vh - 200px);
 }
@@ -30,11 +31,11 @@ body {
   padding: 30px;
   background: floralwhite;
   align-self: stretch;
+  border-radius: 10px;
 }
 
 .keyboard {
   display: flex;
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
   align-self: stretch;
@@ -101,8 +102,9 @@ h4 {
 svg#keyboard {
   display: block;
   height: auto;
-  width: 44vw;
-  max-width: 600px;
+  width: 35vw;
+  max-width: 500px;
+  margin-right: 40px;
 }
 
 svg#keyboard g:not(.shadow, .keycaps):hover {
@@ -128,8 +130,8 @@ g.focused {
 }
 .color {
   --color: black;
-  width: 70px;
-  height: 70px;
+  width: 45px;
+  height: 45px;
   border: 5px solid var(--color);
   background: var(--color);
   cursor: pointer;
@@ -143,7 +145,7 @@ g.focused {
 }
 
 .color.active {
-  border: 5px solid black;
+  border: 2px solid black;
   transform: scale(1.1);
 }
 
