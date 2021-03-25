@@ -1,3 +1,8 @@
+body {
+  background: mediumturquoise !important;
+  overflow-y: hidden;
+}
+
 .header--configurator .logo {
   width: 120px;
   position: static;
@@ -9,29 +14,70 @@
 }
 
 .config-container {
-  overflow-y: hidden;
   display: flex;
-  align-items: stretch;
-  justify-content: center;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(240, 240, 240, 1) 100%
-  );
   margin: auto;
-  -webkit-box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
-  -moz-box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
-  box-shadow: 0px 24px 71px -45px rgba(0, 0, 0, 0.56);
+  height: calc(100vh - 200px);
 }
 
-.options {
-  padding: 30px 10px;
-}
 .config-container span {
   font-family: var(--primary-font);
   font-weight: 700;
   font-size: 23px;
-  color: #606060;
+  color: black;
+}
+
+.options {
+  padding: 30px;
+  background: floralwhite;
+  align-self: flex-start;
+}
+
+.keyboard {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  position: relative;
+  z-index: 3;
+  overflow-y: hidden;
+}
+
+.option img {
+  max-width: 150px;
+  max-height: 75px;
+  margin-bottom: 10px;
+}
+
+.option-container {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+  max-width: 700px;
+}
+
+.option-container:last-child {
+  margin-bottom: 0px;
+}
+
+.option-item {
+  padding: 20px;
+  border: 3px solid transparent;
+  margin-right: 14px;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option-item:hover,
+.option-item.active {
+  border: 3px solid black;
+}
+
+.option-item.focused {
+  border: 3px solid rgb(22, 142, 255);
 }
 
 h3 {
@@ -48,46 +94,7 @@ h4 {
 .subheading {
   display: block;
   padding-bottom: 14px;
-}
-
-.option img {
-  max-width: 150px;
-  max-height: 75px;
-  margin-bottom: 10px;
-}
-
-.option-container {
-  display: flex;
-  margin-bottom: 40px;
-  justify-content: flex-start;
-  max-width: 700px;
-}
-.option-item {
-  padding: 20px;
-  border: 3px solid transparent;
-  margin-right: 14px;
-  transition: all 0.3s;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.option-item:hover,
-.option-item.active {
-  border: 3px solid lightgrey;
-}
-
-.option-item.focused {
-  border: 3px solid rgb(22, 142, 255);
-}
-
-.keyboard {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  color: black;
 }
 
 svg {
