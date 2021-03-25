@@ -59,25 +59,44 @@ window.addEventListener("scroll", isCardVisible);
 window.addEventListener("resize", isCardVisible); */
 
 /////////// Parallax /////////
-/* gsap.to(".slower", {
-  y: -100,
+gsap.to(".slower", {
+  y: 800,
+  rotate: -150,
+  scale: 0.1,
   ease: "none",
   scrollTrigger: {
-    markers: true,
-    trigger: "#section_2",
     // start: "top bottom", // the default values
     // end: "bottom top",
     scrub: true,
   },
 });
 gsap.to(".faster", {
-  y: 500,
+  y: -1800,
+  rotate: 160,
+  scale: 3,
   ease: "none",
   scrollTrigger: {
-    markers: true,
-    trigger: "#section_2",
     // start: "top bottom", // the default values
     // end: "bottom top",
     scrub: true,
   },
-}); */
+});
+
+gsap.from("#section-three img", {
+  y: 200,
+  duration: 2,
+  ease: "ease-in-out",
+  scrollTrigger: {
+    trigger: "#section-three .section-desc",
+  },
+});
+
+gsap.from(".feature", {
+  y: 100,
+  opacity: 0,
+  stagger: 0.3,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".additional-features",
+  },
+});

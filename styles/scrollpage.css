@@ -24,6 +24,9 @@ header {
   padding: 60px 20px;
   justify-content: space-between;
 }
+.logo {
+  width: 190px;
+}
 nav ul {
   list-style: none;
   display: flex;
@@ -38,7 +41,7 @@ nav ul li a {
 
 /*/////////////       SECTIONS ONE-FIVE        //////////////// */
 #section-one {
-  background: #b6ffcd;
+  background: white;
   /* background-color: #b6ffcd; */
   background-size: cover;
 }
@@ -49,7 +52,7 @@ nav ul li a {
   background-color: white;
 }
 #section-four {
-  background-color: #b6ffcd;
+  background: mediumturquoise;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -57,7 +60,7 @@ nav ul li a {
   justify-content: center;
 }
 #section-five {
-  background: floralwhite;
+  background: white;
   height: 100vh;
 }
 main {
@@ -156,22 +159,32 @@ main {
 }
 /* /////////// FOOTER SECTION ////////////*/
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
-.footer ul {
+
+.copyright {
+  margin-bottom: -100px;
+}
+footer ul {
   font-family: var(--primary-font);
   list-style: none;
   margin-right: 200px;
 }
-.footer ul li {
+footer ul li {
   line-height: 30px;
   font-size: 18px;
 }
-.footer ul li a {
+footer ul li a {
   text-decoration: none;
   color: black;
   font-weight: 700;
@@ -291,7 +304,29 @@ main {
   .additional-features {
     flex-wrap: wrap;
   }
-  .footer {
+  footer {
     flex-wrap: wrap;
   }
+
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.faster,
+.slower {
+  z-index: -1;
+  position: absolute;
+  left: 80px;
+  top: 100px;
+  transform: rotate(320deg);
+  width: 400px;
+}
+
+.faster {
+  right: 0;
+  top: 300px;
+  left: unset;
 }
