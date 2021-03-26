@@ -232,3 +232,12 @@ function runAnimationOnce(element, className, callback = () => {}) {
 }
 
 init();
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll("[data-scrollTrigger]").forEach((el) => {
+  console.log(el, el.dataset.duration);
+  gsap.from(el, {
+    y: 100,
+    duration: parseInt(el.dataset.duration) || 2,
+    scrollTrigger: el,
+  });
+});

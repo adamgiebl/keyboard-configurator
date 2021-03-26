@@ -1,5 +1,5 @@
 body {
-  background: mediumturquoise !important;
+  background: #c9f5f3 !important;
   overflow-y: hidden;
 }
 
@@ -81,7 +81,7 @@ body {
 }
 .option-item:hover,
 .option-item.active {
-  border: 3px solid mediumturquoise;
+  border: 3px solid #b7e6e4;
 }
 
 .option-item.focused {
@@ -179,7 +179,9 @@ g.focused {
   left: 0;
   pointer-events: none;
 }
-
+.wave path {
+  fill: #b7e6e4;
+}
 @media only screen and (max-width: 900px) {
   .option-container {
     flex-wrap: wrap;
