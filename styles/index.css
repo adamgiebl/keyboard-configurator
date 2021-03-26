@@ -50,6 +50,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   padding: 0 20px;
+  margin-top: 50px;
 }
 
 .cta h1 {
