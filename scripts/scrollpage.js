@@ -83,8 +83,7 @@ gsap.to(".faster", {
 });
 
 gsap.from("#section-three img", {
-  y: 200,
-  duration: 2,
+  y: -200,
   ease: "ease-in-out",
   scrollTrigger: {
     trigger: "#section-three .section-desc",

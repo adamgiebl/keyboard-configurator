@@ -60,13 +60,28 @@ main {
   font-weight: 300;
   max-width: 500px;
 }
+.cta a::before {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: lightblue;
+  bottom: 350px;
+  left: 40px;
+  border-radius: 50%;
+  z-index: -10;
+}
+
+.cta a:hover {
+  border-bottom: 3px solid lightblue;
+  content: "";
+}
 
 .cta a {
   margin-top: 20px;
-  background: black;
   border: none;
-  padding: 15px 25px;
-  color: white;
+  padding: 7px 0;
+  color: black;
   font-family: var(--primary-font);
   text-decoration: none;
 }
